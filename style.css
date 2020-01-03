@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(240, 78%, 98%);
+    font-family: 'Montserrat', sans-serif;
+    background-image: url(images/bg-top.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    padding: 50px;
+    color: hsl(232, 13%, 33%);
+}
+
+.toggle,
+.price-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.monthly-price {
+    display: none
+}
+
+.toggle p {
+    font-size: 12px;
+    align-self: center;
+    color: hsl(234, 14%, 74%);
+    margin-right: 15px;
+}
+
+.toggle p:last-child {
+    margin-left: 15px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: #7983ff;
+    border-radius: 20px;
+}
+
+.switch::after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: white;
+    top: 1px;
+    left: 1px;
+    transition: all 0.3s;
+}
+
+.checkbox:checked+.switch::after {
+    left: 20px;
+}
+
+.checkbox {
+    display: none;
+}
+
+.container {
+    padding: 70px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    padding: 25px;
+    background-color: white;
+    border-radius: 8px;
+    text-align: center;
+    color: hsl(232, 13%, 33%);
+}
+
+.card h2 {
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+.card p {
+    font-size: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid hsl(234, 14%, 74%);
+}
+
+.card span {
+    font-size: 30px;
+}
+
+.card h3 {
+    padding: 15px;
+    border-bottom: 1px solid hsl(234, 14%, 74%);
+}
+
+.card button {
+    margin: 20px 0;
+    width: 100%;
+    padding: 10px;
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border-radius: 5px;
+    color: white;
+}
+
+.card button:hover {
+    background-image: none;
+    background-color: white;
+    color: hsl(232, 13%, 33%);
+    border: 1px solid hsl(232, 13%, 33%);
+}
+
+.professional {
+    transform: scaleY(1.1);
+    color: white;
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+.professional button {
+    background-image: none;
+    background-color: white;
+    color: hsl(232, 13%, 33%);
+}
+
+.professional button:hover {
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: white;
+    border: 1px solid white;
+}
+
+@media screen and (max-width:730px) {
+    .price-card {
+        flex-direction: column;
+    }
+    .card {
+        margin: 20px;
+    }
+    .professional {
+        transform: initial;
+    }
+    body {
+        background-image: none;
+    }
+}
